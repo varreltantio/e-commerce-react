@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { commerce } from "./lib/commerce";
 import { Products, Navbar, Cart, Checkout } from "./components";
 
@@ -69,10 +69,10 @@ const App = () => {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/e-commerce-react">
       <Navbar totalItems={cart.total_items} />
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/home">
           <Products products={products} onAddToCart={handleAddToCart} />
         </Route>
         <Route exact path="/cart">
