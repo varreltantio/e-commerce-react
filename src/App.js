@@ -69,7 +69,7 @@ const App = () => {
   }, []);
 
   return (
-    <Router basename="/e-commerce-react">
+    <Router>
       <Navbar totalItems={cart.total_items} />
       <Switch>
         <Route exact path="/home">
